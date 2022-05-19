@@ -1,3 +1,5 @@
+import { MatCardModule } from '@angular/material/card';
+import { OverlayModule } from '@angular/cdk/overlay';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -14,12 +16,10 @@ import { MatListModule } from '@angular/material/list';
 import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavComponent,
-    ProjectsComponent
-  ],
+  declarations: [AppComponent, NavComponent, ProjectsComponent],
   imports: [
+    MatCardModule,
+    OverlayModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -28,9 +28,9 @@ import { ProjectsComponent } from './projects/projects.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
