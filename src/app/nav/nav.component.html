@@ -42,10 +42,12 @@
         [cdkConnectedOverlayOrigin]="trigger"
         [cdkConnectedOverlayOpen]="isOpen"
         ><mat-card>
-          <mat-list role="list">
-            <mat-list-item role="list-item">Green Theme</mat-list-item>
-            <mat-list-item role="list-item">Red</mat-list-item>
-          </mat-list>
+          <mat-action-list (click)="toggleThemeMenu()" role="list">
+            <button mat-list-item role="list-option">Deep Purple</button>
+            <button mat-list-item role="list-option">Indigo Pink</button>
+            <button mat-list-item role="list-option">Pink Bluegray</button>
+            <button mat-list-item role="list-option">purple-green</button>
+          </mat-action-list>
         </mat-card></ng-template
       >
     </mat-toolbar>
