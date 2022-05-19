@@ -26,9 +26,28 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>milldrew-portfolio</span>
-      <button class="theme-menu" color="accent" mat-icon-button>
-        <mat-icon>colorize</mat-icon>
+      <button
+        (click)="toggleThemeMenu()"
+        type="button"
+        cdkOverlayOrigin
+        #trigger="cdkOverlayOrigin"
+        class="theme-menu"
+        color="accent"
+        mat-icon-button
+      >
+        <mat-icon>format_paint</mat-icon>
       </button>
+      <ng-template
+        cdkConnectedOverlay
+        [cdkConnectedOverlayOrigin]="trigger"
+        [cdkConnectedOverlayOpen]="isOpen"
+        ><mat-card>
+          <mat-list role="list">
+            <mat-list-item role="list-item">Green Theme</mat-list-item>
+            <mat-list-item role="list-item">Red</mat-list-item>
+          </mat-list>
+        </mat-card></ng-template
+      >
     </mat-toolbar>
     <!-- Add Content Here -->
     <router-outlet> </router-outlet>
