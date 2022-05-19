@@ -15,3 +15,12 @@
   top: 0;
   z-index: 1;
 }
+
+.theme-menu {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+.theme-menu:hover {
+  color: white;
+}
