@@ -56,6 +56,18 @@ $milldrew-portfolio-warn: mat.define-palette(mat.$red-palette);
   @include mat.all-component-typographies($foo-typography);
 }
 
+.ms {
+  $foo-typography: mat.define-typography-config(
+    $font-family: "Fantasy",
+  );
+  @include mat.all-component-typographies($foo-typography);
+}
+.sans-serif {
+  $foo-typography: mat.define-typography-config(
+    $font-family: "Sans-serif",
+  );
+  @include mat.all-component-typographies($foo-typography);
+}
 .serif {
   $foo-typography: mat.define-typography-config(
     $font-family: "Serif",
