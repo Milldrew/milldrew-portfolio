@@ -56,7 +56,7 @@ $milldrew-portfolio-warn: mat.define-palette(mat.$red-palette);
   @include mat.all-component-typographies($foo-typography);
 }
 
-.ms {
+.fantasy {
   $foo-typography: mat.define-typography-config(
     $font-family: "Fantasy",
   );
