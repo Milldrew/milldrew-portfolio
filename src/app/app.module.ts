@@ -14,9 +14,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { ProjectsComponent } from './projects/projects.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, ProjectsComponent],
+  declarations: [AppComponent, NavComponent, ProjectsComponent, HomeComponent],
   imports: [
     MatCardModule,
     OverlayModule,

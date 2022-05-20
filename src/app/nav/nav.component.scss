@@ -1,3 +1,7 @@
+@use "@angular/material" as mat;
+.main-tool-bar {
+  @include mat.elevation(3);
+}
 .title {
   color: inherit;
   text-decoration: inherit;
@@ -22,7 +26,7 @@
 
 .typography-menu {
   position: absolute;
-  right: 200px;
+  right: 160px;
   cursor: pointer;
 }
 .theme-menu {

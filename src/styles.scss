@@ -1,3 +1,5 @@
+@use "sass:map";
+@use "./app/home/home-theme.scss" as home;
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use "@angular/material" as mat;
@@ -49,49 +51,49 @@ $milldrew-portfolio-warn: mat.define-palette(mat.$red-palette);
 // theming systems such as "color" or "typography".
 
 //--- TYPOGRAPHY
-.monospace {
-  $foo-typography: mat.define-typography-config(
-    $font-family: "Monospace",
-  );
-  @include mat.all-component-typographies($foo-typography);
-}
 
 .fantasy {
   $foo-typography: mat.define-typography-config(
     $font-family: "Fantasy",
   );
   @include mat.all-component-typographies($foo-typography);
+  @include home.typography($foo-typography);
 }
 .sans-serif {
   $foo-typography: mat.define-typography-config(
     $font-family: "Sans-serif",
   );
   @include mat.all-component-typographies($foo-typography);
+  @include home.typography($foo-typography);
 }
 .serif {
   $foo-typography: mat.define-typography-config(
     $font-family: "Serif",
   );
   @include mat.all-component-typographies($foo-typography);
+  @include home.typography($foo-typography);
 }
 .monospace {
   $foo-typography: mat.define-typography-config(
     $font-family: "Monospace",
   );
   @include mat.all-component-typographies($foo-typography);
+  @include home.typography($foo-typography);
 }
 .cursive {
   $foo-typography: mat.define-typography-config(
     $font-family: "Cursive",
   );
   @include mat.all-component-typographies($foo-typography);
+  @include home.typography($foo-typography);
 }
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
+//--------- COLORS
 .purple-green {
-  $milldrew-portfolio-theme-purple-green: mat.define-light-theme(
+  $milldrew-portfolio-theme-purple-green: mat.define-dark-theme(
     (
       color: (
         primary: $milldrew-portfolio-primary-purple,
@@ -101,9 +103,10 @@ $milldrew-portfolio-warn: mat.define-palette(mat.$red-palette);
     )
   );
   @include mat.all-component-colors($milldrew-portfolio-theme-purple-green);
+  @include home.color($milldrew-portfolio-theme-purple-green);
 }
 .pink-blue-gray {
-  $milldrew-portfolio-theme-pink-blue-gray: mat.define-light-theme(
+  $milldrew-portfolio-theme-pink-blue-gray: mat.define-dark-theme(
     (
       color: (
         primary: $milldrew-portfolio-primary-pink,
@@ -113,6 +116,7 @@ $milldrew-portfolio-warn: mat.define-palette(mat.$red-palette);
     )
   );
   @include mat.all-component-colors($milldrew-portfolio-theme-pink-blue-gray);
+  @include home.color($milldrew-portfolio-theme-pink-blue-gray);
 }
 .indigo-pink {
   $milldrew-portfolio-theme-indigo-pink: mat.define-light-theme(
@@ -125,9 +129,10 @@ $milldrew-portfolio-warn: mat.define-palette(mat.$red-palette);
     )
   );
   @include mat.all-component-colors($milldrew-portfolio-theme-indigo-pink);
+  @include home.color($milldrew-portfolio-theme-indigo-pink);
 }
 .deep-purple-amber {
-  $milldrew-portfolio-theme-deep-purple-amber: mat.define-light-theme(
+  $milldrew-portfolio-theme-deep-purple-amber: mat.define-dark-theme(
     (
       color: (
         primary: $milldrew-portfolio-primary-deep-purple,
@@ -139,6 +144,7 @@ $milldrew-portfolio-warn: mat.define-palette(mat.$red-palette);
   @include mat.all-component-colors(
     $milldrew-portfolio-theme-deep-purple-amber
   );
+  @include home.color($milldrew-portfolio-theme-deep-purple-amber);
 }
 
 /* You can add global styles to this file, and also import other style files */
@@ -149,7 +155,7 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  //  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 @import "https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Two+Tone";
