@@ -34,8 +34,8 @@ $milldrew-portfolio-accent-amber: mat.define-palette(
   A100,
   A400
 );
-$milldrew-portfolio-primary: mat.define-palette(mat.$indigo-palette);
-$milldrew-portfolio-accent: mat.define-palette(
+$milldrew-portfolio-primary-indigo: mat.define-palette(mat.$indigo-palette);
+$milldrew-portfolio-accent-pink: mat.define-palette(
   mat.$pink-palette,
   A200,
   A100,
@@ -56,12 +56,68 @@ $milldrew-portfolio-theme: mat.define-light-theme(
     ),
   )
 );
+$milldrew-portfolio-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $milldrew-portfolio-primary-purple,
+      accent: $milldrew-portfolio-accent-green,
+      warn: $milldrew-portfolio-warn,
+    ),
+  )
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-.theme {
-  @include mat.all-component-themes($milldrew-portfolio-theme);
+$milldrew-portfolio-theme-purple-green: mat.define-light-theme(
+  (
+    color: (
+      primary: $milldrew-portfolio-primary-purple,
+      accent: $milldrew-portfolio-accent-green,
+      warn: $milldrew-portfolio-warn,
+    ),
+  )
+);
+.purple-green {
+  @include mat.all-component-themes($milldrew-portfolio-theme-purple-green);
+}
+$milldrew-portfolio-theme-pink-blue-gray: mat.define-light-theme(
+  (
+    color: (
+      primary: $milldrew-portfolio-primary-pink,
+      accent: $milldrew-portfolio-accent-blue-gray,
+      warn: $milldrew-portfolio-warn,
+    ),
+  )
+);
+.pink-blue-gray {
+  @include mat.all-component-themes($milldrew-portfolio-theme-pink-blue-gray);
+}
+$milldrew-portfolio-theme-indigo-pink: mat.define-light-theme(
+  (
+    color: (
+      primary: $milldrew-portfolio-primary-indigo,
+      accent: $milldrew-portfolio-accent-pink,
+      warn: $milldrew-portfolio-warn,
+    ),
+  )
+);
+.indigo-pink {
+  @include mat.all-component-themes($milldrew-portfolio-theme-indigo-pink);
+}
+$milldrew-portfolio-theme-deep-purple-amber: mat.define-light-theme(
+  (
+    color: (
+      primary: $milldrew-portfolio-primary-deep-purple,
+      accent: $milldrew-portfolio-accent-amber,
+      warn: $milldrew-portfolio-warn,
+    ),
+  )
+);
+.deep-purple-amber {
+  @include mat.all-component-themes(
+    $milldrew-portfolio-theme-deep-purple-amber
+  );
 }
 
 /* You can add global styles to this file, and also import other style files */

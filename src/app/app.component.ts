@@ -13,7 +13,10 @@ export class AppComponent implements OnInit {
     private renderer: Renderer2
   ) {}
   ngOnInit() {
-    this.renderer.setAttribute(this.document.body, 'class', 'theme');
+    this.renderer.setAttribute(this.document.body, 'class', 'purple-green');
     console.log('hello');
+  }
+  changeTheme(theme: string) {
+    this.renderer.setAttribute(this.document.body, 'class', theme);
   }
 }

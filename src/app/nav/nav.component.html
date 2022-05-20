@@ -43,10 +43,34 @@
         [cdkConnectedOverlayOpen]="isOpen"
         ><mat-card>
           <mat-action-list (click)="toggleThemeMenu()" role="list">
-            <button mat-list-item role="list-option">Deep Purple Amber</button>
-            <button mat-list-item role="list-option">Indigo Pink</button>
-            <button mat-list-item role="list-option">Pink Blue-gray</button>
-            <button mat-list-item role="list-option">Purple Green</button>
+            <button
+              (click)="chosenTheme('deep-purple-amber')"
+              mat-list-item
+              role="list-option"
+            >
+              Deep Purple Amber
+            </button>
+            <button
+              mat-list-item
+              role="list-option"
+              (click)="chosenTheme('indigo-pink')"
+            >
+              Indigo Pink
+            </button>
+            <button
+              mat-list-item
+              role="list-option"
+              (click)="chosenTheme('pink-blue-gray')"
+            >
+              Pink Blue-gray
+            </button>
+            <button
+              mat-list-item
+              role="list-option"
+              (click)="chosenTheme('purple-green')"
+            >
+              Purple Green
+            </button>
           </mat-action-list>
         </mat-card></ng-template
       >
