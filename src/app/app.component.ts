@@ -12,8 +12,8 @@ export class AppComponent {
     @Inject(DOCUMENT) private document: Document,
     private renderer: Renderer2
   ) {}
-  currentTheme: string = 'pink-blue-gray';
-  currentFont: string = 'monospace';
+  currentTheme: string = 'deep-purple-amber';
+  currentFont: string = 'sans-serif';
   changeFont(font: string) {
     this.currentFont = font;
     const classes = `${this.currentTheme}  ${this.currentFont}`;
