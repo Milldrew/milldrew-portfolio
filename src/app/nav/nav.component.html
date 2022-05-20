@@ -26,6 +26,63 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>Milldrew</span>
+      <!-- ---------TYPOGRAPHY THEMES------------- -->
+      <button
+        (click)="toggleFontMenu()"
+        type="button"
+        cdkOverlayOrigin
+        #typography="cdkOverlayOrigin"
+        class="typography-menu"
+        color="accent"
+        mat-icon-button
+      >
+        {{ typography }}
+      </button>
+      <ng-template
+        cdkConnectedOverlay
+        [cdkConnectedOverlayOrigin]="typography"
+        [cdkConnectedOverlayOpen]="isOpenFonts"
+        ><mat-card>
+          <mat-action-list (click)="toggleFontMenu()" role="list">
+            <button
+              (click)="chosenTypography('Cursive')"
+              mat-list-item
+              role="list-option"
+            >
+              Cursive
+            </button>
+            <button
+              mat-list-item
+              role="list-option"
+              (click)="chosenTheme('indigo-pink')"
+            >
+              Monospace
+            </button>
+            <button
+              mat-list-item
+              role="list-option"
+              (click)="chosenTheme('pink-blue-gray')"
+            >
+              Serif
+            </button>
+            <button
+              mat-list-item
+              role="list-option"
+              (click)="chosenTheme('purple-green')"
+            >
+              Ms
+            </button>
+            <button
+              mat-list-item
+              role="list-option"
+              (click)="chosenTheme('purple-green')"
+            >
+              Sans-serif
+            </button>
+          </mat-action-list>
+        </mat-card></ng-template
+      >
+      <!-- ---------COLOR THEMES ------------- -->
       <button
         (click)="toggleThemeMenu()"
         type="button"
@@ -35,7 +92,6 @@
         color="accent"
         mat-icon-button
       >
-        <!-- COLOR THEMES -->
         <mat-icon>format_paint</mat-icon>
       </button>
       <ng-template

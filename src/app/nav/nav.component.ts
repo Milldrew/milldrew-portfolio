@@ -9,8 +9,12 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent {
-  isOpen = true;
+  isOpenFonts = true;
+  isOpen = false;
 
+  toggleFontMenu() {
+    this.isOpenFonts = !this.isOpenFonts;
+  }
   toggleThemeMenu() {
     this.isOpen = !this.isOpen;
   }
@@ -21,11 +25,18 @@ export class NavComponent {
       shareReplay()
     );
 
+  typography = 'Monospace';
+  @Output() private chooseTypography: EventEmitter<string>;
   @Output() private chooseTheme: EventEmitter<string>;
   constructor(private breakpointObserver: BreakpointObserver) {
     this.chooseTheme = new EventEmitter();
+    this.chooseTypography = new EventEmitter();
   }
   chosenTheme(theme: string) {
     this.chooseTheme.emit(theme);
+  }
+  chosenTypography(typography: string) {
+    this.typography = typography;
+    this.chooseTypography.emit(typography);
   }
 }
