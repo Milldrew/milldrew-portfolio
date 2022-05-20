@@ -9,7 +9,7 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent {
-  isOpenFonts = true;
+  isOpenFonts = false;
   isOpen = false;
 
   toggleFontMenu() {
@@ -25,7 +25,7 @@ export class NavComponent {
       shareReplay()
     );
 
-  typography = 'Monospace';
+  typography = 'Sans-serif';
   @Output() private chooseTypography: EventEmitter<string>;
   @Output() private chooseTheme: EventEmitter<string>;
   constructor(private breakpointObserver: BreakpointObserver) {
