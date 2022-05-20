@@ -14,13 +14,6 @@ export class BreakpointObserverOverviewExample implements OnDestroy {
   currentScreenSize: string;
 
   // Create a map to display breakpoint names for demonstration purposes.
-  displayNameMap = new Map([
-    [Breakpoints.XSmall, 'XSmall'],
-    [Breakpoints.Small, 'Small'],
-    [Breakpoints.Medium, 'Medium'],
-    [Breakpoints.Large, 'Large'],
-    [Breakpoints.XLarge, 'XLarge'],
-  ]);
 
   constructor(breakpointObserver: BreakpointObserver) {
     breakpointObserver

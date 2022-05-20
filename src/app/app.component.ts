@@ -12,7 +12,16 @@ export class AppComponent {
     @Inject(DOCUMENT) private document: Document,
     private renderer: Renderer2
   ) {}
+  currentTheme: string = 'pink-blue-gray';
+  currentFont: string = 'monospace';
+  changeFont(font: string) {
+    this.currentFont = font;
+    const classes = `${this.currentTheme}  ${this.currentFont}`;
+    this.renderer.setAttribute(this.document.body, 'class', classes);
+  }
   changeTheme(theme: string) {
-    this.renderer.setAttribute(this.document.body, 'class', theme);
+    this.currentTheme = theme;
+    const classes = `${this.currentTheme}  ${this.currentFont}`;
+    this.renderer.setAttribute(this.document.body, 'class', classes);
   }
 }

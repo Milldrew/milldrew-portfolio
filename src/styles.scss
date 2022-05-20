@@ -48,6 +48,21 @@ $milldrew-portfolio-warn: mat.define-palette(mat.$red-palette);
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
 
+//--- TYPOGRAPHY
+.monospace {
+  $foo-typography: mat.define-typography-config(
+    $font-family: "Monospace",
+  );
+  @include mat.all-component-typographies($foo-typography);
+}
+
+.cursive {
+  $foo-typography: mat.define-typography-config(
+    $font-family: "Cursive",
+  );
+  @include mat.all-component-typographies($foo-typography);
+}
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.

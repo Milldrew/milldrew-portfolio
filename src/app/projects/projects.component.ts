@@ -38,7 +38,6 @@ export class ProjectsComponent implements OnDestroy {
     [Breakpoints.XLarge, 'XLarge'],
   ]);
   ngOnDestroy() {
-    alert('hello');
     console.log('destroyed');
   }
 }

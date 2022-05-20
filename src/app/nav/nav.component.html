@@ -31,7 +31,7 @@
         (click)="toggleFontMenu()"
         type="button"
         cdkOverlayOrigin
-        #typography="cdkOverlayOrigin"
+        #typographymenu="cdkOverlayOrigin"
         class="typography-menu"
         color="accent"
         mat-icon-button
@@ -40,12 +40,12 @@
       </button>
       <ng-template
         cdkConnectedOverlay
-        [cdkConnectedOverlayOrigin]="typography"
+        [cdkConnectedOverlayOrigin]="typographymenu"
         [cdkConnectedOverlayOpen]="isOpenFonts"
         ><mat-card>
           <mat-action-list (click)="toggleFontMenu()" role="list">
             <button
-              (click)="chosenTypography('Cursive')"
+              (click)="chosenTypography('cursive')"
               mat-list-item
               role="list-option"
             >

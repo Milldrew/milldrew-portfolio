@@ -36,7 +36,7 @@ export class NavComponent {
     this.chooseTheme.emit(theme);
   }
   chosenTypography(typography: string) {
-    this.typography = typography;
+    this.typography = typography[0].toUpperCase() + typography.slice(1);
     this.chooseTypography.emit(typography);
   }
 }
