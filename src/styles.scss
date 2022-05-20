@@ -56,6 +56,18 @@ $milldrew-portfolio-warn: mat.define-palette(mat.$red-palette);
   @include mat.all-component-typographies($foo-typography);
 }
 
+.serif {
+  $foo-typography: mat.define-typography-config(
+    $font-family: "Serif",
+  );
+  @include mat.all-component-typographies($foo-typography);
+}
+.monospace {
+  $foo-typography: mat.define-typography-config(
+    $font-family: "Monospace",
+  );
+  @include mat.all-component-typographies($foo-typography);
+}
 .cursive {
   $foo-typography: mat.define-typography-config(
     $font-family: "Cursive",
