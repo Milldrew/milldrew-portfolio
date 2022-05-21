@@ -1,3 +1,4 @@
+@use "../responsive.scss" as responsive;
 :host {
   display: flex;
   height: 35vh;
@@ -8,5 +9,19 @@
 }
 
 .hero-header {
-  font-size: 300%;
+  @include responsive.for-size(XLarge) {
+    font-size: 500%;
+  }
+  @include responsive.for-size(Large) {
+    font-size: 500%;
+  }
+  @include responsive.for-size(Medium) {
+    font-size: 400%;
+  }
+  @include responsive.for-size(Small) {
+    font-size: 250%;
+  }
+  @include responsive.for-size(XSmall) {
+    font-size: 200%;
+  }
 }
