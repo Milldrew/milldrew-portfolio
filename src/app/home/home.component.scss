@@ -13,7 +13,7 @@
     font-size: 500%;
   }
   @include responsive.for-size(Large) {
-    font-size: 400%;
+    font-size: 300%;
   }
   @include responsive.for-size(Medium) {
     font-size: 300%;
