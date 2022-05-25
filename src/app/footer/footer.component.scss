@@ -1,9 +1,33 @@
+@use "../responsive.scss" as responsive;
 :host {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 10vh;
   margin: {
-    top: 20px;
+    top: 80px;
   }
+
+  @include responsive.for-size(XLarge) {
+    font-size: 180%;
+  }
+  @include responsive.for-size(Large) {
+    font-size: 160%;
+  }
+  @include responsive.for-size(Medium) {
+    font-size: 140%;
+  }
+  @include responsive.for-size(Small) {
+    font-size: 110%;
+  }
+}
+
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 10vw;
 }
