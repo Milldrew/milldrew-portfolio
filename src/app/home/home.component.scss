@@ -1,5 +1,8 @@
 @use "../responsive.scss" as responsive;
 :host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero {
@@ -9,7 +12,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: inherit;
 }
 
 .hero-header {
@@ -27,5 +29,24 @@
   }
   @include responsive.for-size(XSmall) {
     font-size: 100%;
+  }
+}
+mat-card {
+  width: 80%;
+
+  margin: {
+    top: 30px;
+  }
+}
+
+.card-content {
+  display: flex;
+}
+
+mat-card-content {
+  padding: {
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
   }
 }

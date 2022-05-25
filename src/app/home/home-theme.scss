@@ -9,7 +9,7 @@
   $primary-palette: map.get($color-config, "primary");
   $accent-palette: map.get($color-config, "accent");
 
-  app-home {
+  .inherit-theme {
     // Read the 500 hue from the primary color palette.
     background-color: mat.get-color-from-palette($primary-palette, 500);
     color: mat.get-color-from-palette($accent-palette, 200);
@@ -20,7 +20,7 @@
   // Get the typography config from the theme.
   $typography-config: mat.get-typography-config($theme);
 
-  app-home {
+  .inherit-theme {
     font-family: mat.font-family($typography-config);
   }
 }
