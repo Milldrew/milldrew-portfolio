@@ -45,8 +45,10 @@ mat-card {
   }
   @include responsive.for-size(XSmall) {
     flex-direction: column;
+    align-items: center;
   }
   display: flex;
+  align-items: flex-start;
 }
 
 mat-card-content {
