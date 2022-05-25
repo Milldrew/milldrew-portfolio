@@ -15,9 +15,17 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { ProjectsComponent } from './projects/projects.component';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, ProjectsComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    NavComponent,
+    ProjectsComponent,
+    HomeComponent,
+    FooterComponent,
+  ],
   imports: [
     MatCardModule,
     OverlayModule,
@@ -30,6 +38,7 @@ import { HomeComponent } from './home/home.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
