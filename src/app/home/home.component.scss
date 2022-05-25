@@ -1,11 +1,15 @@
 @use "../responsive.scss" as responsive;
 :host {
+}
+
+.hero {
   display: flex;
   height: 35vh;
   width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: inherit;
 }
 
 .hero-header {
