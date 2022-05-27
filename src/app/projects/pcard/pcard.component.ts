@@ -10,6 +10,8 @@ export class PcardComponent implements OnInit {
   title: string = 'Project Title';
   @Input()
   subtitle: string = 'subtitle';
+  @Input()
+  content: string = 'content';
 
   constructor() {}
 
