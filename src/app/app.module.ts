@@ -1,3 +1,4 @@
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatCardModule } from '@angular/material/card';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { NgModule } from '@angular/core';
@@ -27,6 +28,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FooterComponent,
   ],
   imports: [
+    MatTooltipModule,
     MatCardModule,
     OverlayModule,
     BrowserModule,

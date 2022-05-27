@@ -1,4 +1,7 @@
 @use "@angular/material" as mat;
+mat-sidenav-content {
+  height: 100%;
+}
 .main-tool-bar {
   @include mat.elevation(3);
 }
