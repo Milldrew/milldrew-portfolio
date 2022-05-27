@@ -1,13 +1,13 @@
 @use "../responsive.scss" as responsive;
 :host {
-  position: relative;
+  position: fixed;
   bottom: 0px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 12vh;
+  height: 122px;
   margin: {
     top: 80px;
   }
