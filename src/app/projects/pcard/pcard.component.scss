@@ -1,0 +1,12 @@
+@use "../../responsive.scss" as responsive;
+mat-card {
+  width: 250px;
+  min-height: 300px;
+  margin: 10px;
+  @include responsive.for-size(Large) {
+    margin: 40px;
+  }
+  @include responsive.for-size(XLarge) {
+    margin: 40px;
+  }
+}
