@@ -1,6 +1,6 @@
 @use "../responsive.scss" as responsive;
 :host {
-  position: fixed;
+  position: relative;
   bottom: 0px;
   width: 100%;
   display: flex;
