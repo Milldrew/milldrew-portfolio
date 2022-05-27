@@ -1,7 +1,7 @@
 @use "../../responsive.scss" as responsive;
 mat-card {
   width: 250px;
-  min-height: 300px;
+  min-height: 440px;
   margin: 10px;
   @include responsive.for-size(Large) {
     margin: 40px;
@@ -9,4 +9,8 @@ mat-card {
   @include responsive.for-size(XLarge) {
     margin: 40px;
   }
+}
+mat-card-actions {
+  position: absolute;
+  bottom: 30px;
 }
