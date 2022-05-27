@@ -12,6 +12,12 @@ export class PcardComponent implements OnInit {
   subtitle: string = 'subtitle';
   @Input()
   content: string = 'content';
+  @Input()
+  codeLink: string = '';
+  @Input()
+  liveApp: string = '';
+  @Input()
+  imgSrc: string = '';
 
   constructor() {}
 
