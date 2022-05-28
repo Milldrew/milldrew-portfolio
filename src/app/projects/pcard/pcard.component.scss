@@ -1,7 +1,12 @@
 @use "../../responsive.scss" as responsive;
+:host {
+  margin: {
+    bottom: 30px;
+  }
+}
 mat-card {
   width: 250px;
-  min-height: 440px;
+  min-height: 359px;
   margin: 10px;
   @include responsive.for-size(Large) {
     margin: 40px;
