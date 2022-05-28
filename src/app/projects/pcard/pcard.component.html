@@ -4,17 +4,18 @@
     <mat-card-subtitle>{{ subtitle }}</mat-card-subtitle>
   </mat-card-header>
   <img
+    [src]="imgSrc"
     mat-card-image
     src="https://material.angular.io/assets/img/examples/shiba2.jpg"
   />
   <mat-card-content>{{ content }}</mat-card-content>
   <mat-card-actions>
-    <a [href]="codeLink">
+    <a [href]="codeLink" target="blank">
       <button matTooltip="Go to code repository" mat-stroked-button>
         Code
       </button>
     </a>
-    <a [href]="liveApp">
+    <a [href]="liveApp" target="blank">
       <button matTooltip="Go to live deployment" mat-stroked-button>
         Live App
       </button>
