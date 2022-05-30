@@ -14,7 +14,7 @@
   justify-content: center;
 }
 
-.hero-header {
+.hero-header mat-card-content {
   @include responsive.for-size(XLarge) {
     font-size: 500%;
   }
@@ -52,7 +52,7 @@ mat-card {
 }
 
 mat-card-content {
-  font-size: 130%;
+  //font-size: 130%;
   letter-spacing: 1.2px;
   padding: {
     bottom: 20px;
