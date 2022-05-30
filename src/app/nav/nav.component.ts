@@ -9,6 +9,9 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent {
+  scrollToTop(content: any) {
+    window.scroll(0, 0);
+  }
   isOpenFonts = false;
   isOpen = false;
 

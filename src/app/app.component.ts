@@ -1,5 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, Renderer2 } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ import { Component, Inject, Renderer2 } from '@angular/core';
 export class AppComponent {
   title = 'milldrew-portfolio';
   constructor(
+    private router: Router,
     @Inject(DOCUMENT) private document: Document,
     private renderer: Renderer2
   ) {}
@@ -23,5 +25,15 @@ export class AppComponent {
     this.currentTheme = theme;
     const classes = `${this.currentTheme}  ${this.currentFont}`;
     this.renderer.setAttribute(this.document.body, 'class', classes);
+  }
+
+  ngOnInit() {
+    this.router.events.subscribe((event) => {
+      if (!(event instanceof NavigationEnd)) {
+        return;
+      }
+
+      window.scrollTo(0, 0);
+    });
   }
 }

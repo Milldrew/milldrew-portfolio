@@ -8,7 +8,7 @@
     [opened]="(isHandset$ | async) === false"
   >
     <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
+    <mat-nav-list (click)="scrollToTop(content)">
       <a color="accent" mat-list-item routerLink="">Home</a>
       <a color="accent" mat-list-item routerLink="projects">Projects</a>
       <a color="accent" mat-list-item routerLink="certifications"
@@ -17,7 +17,7 @@
       <a color="accent" mat-list-item routerLink="degrees">Degrees</a>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>
+  <mat-sidenav-content #content>
     <mat-toolbar class="main-tool-bar" color="primary">
       <button
         type="button"
