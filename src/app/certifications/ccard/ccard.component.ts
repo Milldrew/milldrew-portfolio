@@ -13,9 +13,7 @@ export class CcardComponent implements OnInit {
   @Input()
   content: string = 'content';
   @Input()
-  codeLink: string = '';
-  @Input()
-  liveApp: string = '';
+  websiteLink: string = '';
   @Input()
   imgSrc: string = '';
 
