@@ -46,6 +46,7 @@ mat-card {
   @include responsive.for-size(Large) {
     justify-content: row;
     flex-direction: column;
+    width: 40%;
   }
   @include responsive.for-size(XLarge) {
     justify-content: row;
