@@ -1,0 +1,25 @@
+@use "../../responsive.scss" as responsive;
+:host {
+  margin: {
+    bottom: 30px;
+  }
+}
+mat-card {
+  width: 250px;
+  min-height: 359px;
+  margin: 10px;
+  @include responsive.for-size(Large) {
+    margin: 40px;
+  }
+  @include responsive.for-size(XLarge) {
+    margin: 40px;
+  }
+}
+mat-card-actions {
+  position: absolute;
+  bottom: 30px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
