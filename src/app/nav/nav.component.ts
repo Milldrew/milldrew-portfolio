@@ -25,7 +25,7 @@ export class NavComponent {
       shareReplay()
     );
 
-  typography = 'Sans-serif';
+  typography = 'Handwriting';
   @Output() private chooseTypography: EventEmitter<string>;
   @Output() private chooseTheme: EventEmitter<string>;
   constructor(private breakpointObserver: BreakpointObserver) {

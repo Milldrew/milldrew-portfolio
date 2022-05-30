@@ -13,7 +13,7 @@ export class AppComponent {
     private renderer: Renderer2
   ) {}
   currentTheme: string = 'deep-purple-amber';
-  currentFont: string = 'sans-serif';
+  currentFont: string = 'handwriting';
   changeFont(font: string) {
     this.currentFont = font;
     const classes = `${this.currentTheme}  ${this.currentFont}`;
