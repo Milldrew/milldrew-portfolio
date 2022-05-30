@@ -19,6 +19,7 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PcardComponent } from './projects/pcard/pcard.component';
+import { DegreesComponent } from './degrees/degrees.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { PcardComponent } from './projects/pcard/pcard.component';
     HomeComponent,
     FooterComponent,
     PcardComponent,
+    DegreesComponent,
   ],
   imports: [
     MatTooltipModule,
