@@ -13,6 +13,10 @@ export class PcardComponent implements OnInit {
   @Input()
   content: string = 'content';
   @Input()
+  serverCodeLink: string = '';
+  @Input()
+  uiCodeLink: string = '';
+  @Input()
   codeLink: string = '';
   @Input()
   liveApp: string = '';
