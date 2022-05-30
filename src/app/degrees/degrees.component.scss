@@ -6,9 +6,16 @@
 }
 
 mat-card {
-  width: 80%;
+  display: flex;
+  flex-direction: column;
+  min-width: 50%;
   @include mat.elevation(8);
 }
 img {
-  width: 70%;
+  max-width: 50%;
+  @include mat.elevation(8);
+  margin: {
+    left: auto;
+    right: auto;
+  }
 }
