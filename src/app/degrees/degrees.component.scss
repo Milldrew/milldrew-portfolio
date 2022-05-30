@@ -8,19 +8,43 @@
 }
 
 mat-card {
+  margin: {
+    bottom: 20px;
+  }
   min-width: 50%;
   @include mat.elevation(8);
+  @include responsive.for-size(Medium) {
+    max-width: 70%;
+  }
+  @include responsive.for-size(Large) {
+    max-width: 50%;
+  }
 }
 img {
   max-width: 50%;
-  @include mat.elevation(8);
+  @include mat.elevation(3);
   margin: {
-    left: auto;
-    right: auto;
+    top: 10px;
+    bottom: 10px;
   }
 }
 h1 {
   text-align: center;
   font-weight: 200;
   letter-spacing: 1.2px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+a {
+  cursor: pointer;
+}
+.all-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
