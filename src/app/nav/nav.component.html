@@ -48,11 +48,11 @@
         ><mat-card>
           <mat-action-list (click)="toggleFontMenu()" role="list">
             <button
-              (click)="chosenTypography('cursive')"
+              (click)="chosenTypography('handwriting')"
               mat-list-item
               role="list-option"
             >
-              Cursive
+              Handwriting
             </button>
             <button
               mat-list-item
@@ -67,13 +67,6 @@
               (click)="chosenTypography('serif')"
             >
               Serif
-            </button>
-            <button
-              mat-list-item
-              role="list-option"
-              (click)="chosenTypography('fantasy')"
-            >
-              Fantasy
             </button>
             <button
               mat-list-item
@@ -115,7 +108,7 @@
               role="list-option"
               (click)="chosenTheme('indigo-pink')"
             >
-              Indigo Pink
+              Indigo Pink (light)
             </button>
             <button
               mat-list-item

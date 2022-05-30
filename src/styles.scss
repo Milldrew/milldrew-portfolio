@@ -52,37 +52,30 @@ $milldrew-portfolio-warn: mat.define-palette(mat.$red-palette);
 
 //--- TYPOGRAPHY
 
-.fantasy {
-  $foo-typography: mat.define-typography-config(
-    $font-family: "Fantasy",
-  );
-  @include mat.all-component-typographies($foo-typography);
-  @include home.typography($foo-typography);
-}
 .sans-serif {
   $foo-typography: mat.define-typography-config(
-    $font-family: "Sans-serif",
+    $font-family: "Roboto",
   );
   @include mat.all-component-typographies($foo-typography);
   @include home.typography($foo-typography);
 }
 .serif {
   $foo-typography: mat.define-typography-config(
-    $font-family: "Serif",
+    $font-family: "Roboto Slab",
   );
   @include mat.all-component-typographies($foo-typography);
   @include home.typography($foo-typography);
 }
 .monospace {
   $foo-typography: mat.define-typography-config(
-    $font-family: "Monospace",
+    $font-family: "Roboto Mono",
   );
   @include mat.all-component-typographies($foo-typography);
   @include home.typography($foo-typography);
 }
-.cursive {
+.handwriting {
   $foo-typography: mat.define-typography-config(
-    $font-family: "Cursive",
+    $font-family: "Mali",
   );
   @include mat.all-component-typographies($foo-typography);
   @include home.typography($foo-typography);
@@ -155,7 +148,7 @@ body {
 }
 body {
   margin: 0;
-  //  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 @import "https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Two+Tone";
