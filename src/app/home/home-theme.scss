@@ -23,6 +23,9 @@
   .inherit-theme {
     font-family: mat.font-family($typography-config);
   }
+  .inherit-typography {
+    font-family: mat.font-family($typography-config);
+  }
 }
 
 @mixin theme($theme) {
