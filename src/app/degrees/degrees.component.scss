@@ -1,0 +1,14 @@
+@use "@angular/material" as mat;
+:host {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+mat-card {
+  width: 80%;
+  @include mat.elevation(8);
+}
+img {
+  width: 70%;
+}
