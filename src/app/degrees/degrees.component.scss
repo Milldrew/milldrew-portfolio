@@ -1,13 +1,13 @@
+@use "../responsive.scss" as responsive;
 @use "@angular/material" as mat;
 :host {
   display: flex;
   min-height: 100vh;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 mat-card {
-  display: flex;
-  flex-direction: column;
   min-width: 50%;
   @include mat.elevation(8);
 }
@@ -18,4 +18,9 @@ img {
     left: auto;
     right: auto;
   }
+}
+h1 {
+  text-align: center;
+  font-weight: 200;
+  letter-spacing: 1.2px;
 }
