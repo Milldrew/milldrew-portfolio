@@ -13,9 +13,11 @@
   align-items: center;
   @include responsive.for-size(Large) {
     flex-direction: row;
+    align-items: start;
   }
   @include responsive.for-size(XLarge) {
     flex-direction: row;
+    align-items: start;
     width: 80%;
   }
 }

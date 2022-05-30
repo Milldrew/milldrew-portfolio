@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CcardComponent implements OnInit {
   @Input()
-  title: string = 'Project Title';
+  title: string = 'Certifications Title';
   @Input()
   subtitle: string = 'subtitle';
   @Input()
