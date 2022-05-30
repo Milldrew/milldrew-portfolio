@@ -3,11 +3,13 @@
     <mat-card-title>{{ title }}</mat-card-title>
     <mat-card-subtitle>{{ subtitle }}</mat-card-subtitle>
   </mat-card-header>
-  <img
-    [src]="imgSrc"
-    mat-card-image
-    src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-  />
+  <a [href]="imgSrc" targe="blank">
+    <img
+      [src]="imgSrc"
+      mat-card-image
+      src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+    />
+  </a>
   <mat-card-content>{{ content }}</mat-card-content>
   <mat-card-actions>
     <a [href]="codeLink" target="blank">
