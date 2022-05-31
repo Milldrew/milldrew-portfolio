@@ -50,7 +50,7 @@ import { CcardComponent } from './certifications/ccard/ccard.component';
     MatListModule,
     FontAwesomeModule,
   ],
-  providers: [],
+  providers: [{ provide: Window, useValue: window }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
