@@ -12,5 +12,6 @@ export class ScrollToHeaderService {
       header.scrollIntoView(true);
     }
     hostElement.nativeElement.scrollTo(0, 0);
+    hostElement.nativeElement.scrollTop = 0;
   }
 }
