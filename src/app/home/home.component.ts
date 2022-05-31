@@ -1,5 +1,5 @@
 import { ScrollToHeaderService } from '../services/scroll-to-header.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  constructor(public scrollService: ScrollToHeaderService) {}
+  constructor(
+    public scrollService: ScrollToHeaderService,
+    private hostElement: ElementRef
+  ) {}
 
   ngAfterViewInit() {
-    this.scrollService.scrollToTop();
+    this.scrollService.scrollToTop(this.hostElement);
   }
 }
