@@ -35,7 +35,7 @@
         Code
       </button>
     </a>
-    <a [href]="liveApp" target="blank">
+    <a *ngIf="liveApp" [href]="liveApp" target="blank">
       <button matTooltip="Go to live deployment" mat-stroked-button>
         Live App
       </button>
