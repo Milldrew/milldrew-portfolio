@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { ElementRef, Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
@@ -6,10 +6,7 @@ import { Injectable } from '@angular/core';
 export class ScrollToHeaderService {
   constructor(public window: Window) {}
 
-  scrollToTop() {
-    const header = window.document.querySelector('h1');
-    if (header) {
-      header.scrollIntoView();
-    }
+  scrollToTop(hostElement: ElementRef) {
+    hostElement.nativeElement.scrollTo(0, 0);
   }
 }
