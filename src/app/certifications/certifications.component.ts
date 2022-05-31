@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { ScrollToHeaderService } from '../services/scroll-to-header.service';
 
 @Component({
@@ -7,9 +7,12 @@ import { ScrollToHeaderService } from '../services/scroll-to-header.service';
   styleUrls: ['./certifications.component.scss'],
 })
 export class CertificationsComponent {
-  constructor(public scrollService: ScrollToHeaderService) {}
+  constructor(
+    public scrollService: ScrollToHeaderService,
+    public hostElement: ElementRef
+  ) {}
 
   ngAfterViewInit(): void {
-    this.scrollService.scrollToTop();
+    this.scrollService.scrollToTop(this.hostElement);
   }
 }
