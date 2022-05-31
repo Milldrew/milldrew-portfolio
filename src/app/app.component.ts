@@ -7,7 +7,7 @@ import { NavigationEnd, Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'milldrew-portfolio';
   constructor(
     private router: Router,
@@ -25,11 +25,5 @@ export class AppComponent implements OnInit {
     this.currentTheme = theme;
     const classes = `${this.currentTheme}  ${this.currentFont}`;
     this.renderer.setAttribute(this.document.body, 'class', classes);
-  }
-
-  ngOnInit() {
-    this.router.events.subscribe((event) => {
-      window.scrollTo(0, 10000);
-    });
   }
 }

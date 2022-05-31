@@ -39,7 +39,4 @@ export class NavComponent {
     this.typography = typography[0].toUpperCase() + typography.slice(1);
     this.chooseTypography.emit(typography);
   }
-  scrollUp() {
-    window.scrollTo(0, 0);
-  }
 }
