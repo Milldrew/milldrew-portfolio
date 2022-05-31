@@ -6,10 +6,10 @@ import { ScrollToHeaderService } from '../services/scroll-to-header.service';
   templateUrl: './certifications.component.html',
   styleUrls: ['./certifications.component.scss'],
 })
-export class CertificationsComponent implements OnInit {
+export class CertificationsComponent {
   constructor(public scrollService: ScrollToHeaderService) {}
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.scrollService.scrollToTop();
   }
 }
