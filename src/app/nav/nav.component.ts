@@ -2,6 +2,7 @@ import { Component, Output, EventEmitter, OnDestroy } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { GoToTopService } from '../services/go-to-top.service';
 
 @Component({
   selector: 'app-nav',
@@ -28,7 +29,11 @@ export class NavComponent {
   typography = 'Handwriting';
   @Output() private chooseTypography: EventEmitter<string>;
   @Output() private chooseTheme: EventEmitter<string>;
-  constructor(private breakpointObserver: BreakpointObserver) {
+  constructor(
+    public topService: GoToTopService,
+    private breakpointObserver: BreakpointObserver,
+    public window: Window
+  ) {
     this.chooseTheme = new EventEmitter();
     this.chooseTypography = new EventEmitter();
   }
@@ -38,5 +43,9 @@ export class NavComponent {
   chosenTypography(typography: string) {
     this.typography = typography[0].toUpperCase() + typography.slice(1);
     this.chooseTypography.emit(typography);
+  }
+  ngAfterContentInit() {
+    const topElement = window.document.querySelector('#top');
+    this.topService.setTopElement(topElement);
   }
 }
