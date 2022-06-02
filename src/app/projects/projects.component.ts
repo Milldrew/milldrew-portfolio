@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
-import { ScrollToHeaderService } from '../services/scroll-to-header.service';
 import { Subject, takeUntil } from 'rxjs';
+import { GoToTopService } from '../services/go-to-top.service';
 
 @Component({
   selector: 'app-projects',
@@ -8,12 +8,9 @@ import { Subject, takeUntil } from 'rxjs';
   styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent {
-  constructor(
-    public scrollService: ScrollToHeaderService,
-    public hostElement: ElementRef
-  ) {}
+  constructor(public scrollTop: GoToTopService, public window: Window) {}
 
-  ngAfterViewInit() {
-    this.scrollService.scrollToTop(this.hostElement);
+  ngAfterContentInit() {
+    this.scrollTop.scrollToTop(this.window);
   }
 }

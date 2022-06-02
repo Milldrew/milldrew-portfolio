@@ -144,7 +144,9 @@ $milldrew-portfolio-warn: mat.define-palette(mat.$red-palette);
 
 html,
 body {
-  height: 100%;
+  //changed for scroll functionality to work
+  min-height: 100%;
+  flex: 1;
 }
 body {
   margin: 0;

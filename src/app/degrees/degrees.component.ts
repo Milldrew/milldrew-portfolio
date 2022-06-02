@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
-import { ScrollToHeaderService } from '../services/scroll-to-header.service';
+import { GoToTopService } from '../services/go-to-top.service';
 
 @Component({
   selector: 'app-degrees',
@@ -8,11 +8,11 @@ import { ScrollToHeaderService } from '../services/scroll-to-header.service';
 })
 export class DegreesComponent {
   constructor(
-    public scrollService: ScrollToHeaderService,
-    public hostElement: ElementRef
+    public hostElement: ElementRef,
+    public window: Window,
+    public goToTop: GoToTopService
   ) {}
-
-  ngAfterViewInit() {
-    this.scrollService.scrollToTop(this.hostElement);
+  ngAfterContentInit() {
+    this.goToTop.scrollToTop(window);
   }
 }

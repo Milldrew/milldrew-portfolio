@@ -44,8 +44,5 @@ export class NavComponent {
     this.typography = typography[0].toUpperCase() + typography.slice(1);
     this.chooseTypography.emit(typography);
   }
-  ngAfterContentInit() {
-    const topElement = window.document.querySelector('#top');
-    this.topService.setTopElement(topElement);
-  }
+  ngAfterContentInit() {}
 }

@@ -13,12 +13,7 @@ const routes: Routes = [
   { path: '**', redirectTo: '' },
 ];
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, {
-      scrollOffset: [0, 100],
-      scrollPositionRestoration: 'top',
-    }),
-  ],
+  imports: [RouterModule.forRoot(routes, {})],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
