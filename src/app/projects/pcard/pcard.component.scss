@@ -8,6 +8,9 @@ mat-card {
   width: 290px;
   min-height: 409px;
   margin: 10px;
+  @include responsive.for-size(XSmall) {
+    width: 260px;
+  }
   @include responsive.for-size(Large) {
     margin: 40px;
   }
