@@ -10,6 +10,5 @@ export class GoToTopService {
     if (topElement) {
       topElement.scrollIntoView();
     }
-    console.log(topElement);
   }
 }
