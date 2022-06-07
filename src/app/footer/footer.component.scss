@@ -8,7 +8,7 @@
   justify-content: flex-start;
   padding-top: 15px;
   align-items: center;
-  height: 150px;
+  height: 250px;
 
   @include responsive.for-size(XLarge) {
     font-size: 160%;
