@@ -8,7 +8,12 @@
     mat-card-image
     src="https://material.angular.io/assets/img/examples/shiba2.jpg"
   />
-  <mat-card-content>{{ content }}</mat-card-content>
+  <mat-expansion-panel class="mat-elevation-z0"
+    ><mat-expansion-panel-header class="mat-elevation-z0">{{
+      content
+    }}</mat-expansion-panel-header>
+    <p>{{ moreContent }}</p>
+  </mat-expansion-panel>
   <mat-card-actions>
     <a *ngIf="serverCodeLink" [href]="serverCodeLink" target="blank">
       <button

@@ -26,3 +26,12 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+mat-expansion-panel {
+  padding {
+    bottom: 20px;
+  }
+  margin: {
+    bottom: 30px;
+  }
+}
