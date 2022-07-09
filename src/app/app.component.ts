@@ -1,5 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
 export class AppComponent {
   title = 'milldrew-portfolio';
   constructor(
+    public router: Router,
     @Inject(DOCUMENT) private document: Document,
     private renderer: Renderer2
   ) {}
@@ -23,5 +25,18 @@ export class AppComponent {
     this.currentTheme = theme;
     const classes = `${this.currentTheme}  ${this.currentFont}`;
     this.renderer.setAttribute(this.document.body, 'class', classes);
+  }
+  hrefToTop: string = '#top';
+  currentUrlPath: string = '/';
+  ngDoCheck() {
+    let path = this.router.url.replace(/#.*/, '');
+    console.log('path', path);
+    console.log('currentUrlPath', this.currentUrlPath);
+
+    if (this.currentUrlPath !== path) {
+      this.currentUrlPath = path;
+      console.log(this.hrefToTop, 'href to to');
+      this.hrefToTop = `${path}#top`;
+    }
   }
 }
