@@ -27,7 +27,7 @@ export class AppComponent {
     this.renderer.setAttribute(this.document.body, 'class', classes);
   }
   hrefToTop: string = '#top';
-  currentUrlPath: string = '/';
+  currentUrlPath: string = '/milldrew-portfolio';
   ngDoCheck() {
     let path = this.router.url.replace(/#.*/, '');
 
