@@ -30,12 +30,9 @@ export class AppComponent {
   currentUrlPath: string = '/';
   ngDoCheck() {
     let path = this.router.url.replace(/#.*/, '');
-    console.log('path', path);
-    console.log('currentUrlPath', this.currentUrlPath);
 
     if (this.currentUrlPath !== path) {
       this.currentUrlPath = path;
-      console.log(this.hrefToTop, 'href to to');
       this.hrefToTop = `${path}#top`;
     }
   }
