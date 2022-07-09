@@ -1,3 +1,4 @@
+import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatCardModule } from '@angular/material/card';
 import { OverlayModule } from '@angular/cdk/overlay';
@@ -36,6 +37,7 @@ import { CcardComponent } from './certifications/ccard/ccard.component';
     CcardComponent,
   ],
   imports: [
+    MatExpansionModule,
     MatTooltipModule,
     MatCardModule,
     OverlayModule,
