@@ -33,7 +33,7 @@ export class AppComponent {
 
     if (this.currentUrlPath !== path) {
       this.currentUrlPath = path;
-      this.hrefToTop = `${path}#top`;
+      this.hrefToTop = `/milldrew-portfolio${path}#top`;
     }
   }
 }
