@@ -5,6 +5,7 @@
   }
 }
 mat-card {
+  height: fit-content;
   width: 290px;
   min-height: 409px;
   margin: 10px;
@@ -33,5 +34,13 @@ mat-expansion-panel {
   }
   margin: {
     bottom: 30px;
+  }
+}
+mat-card-actions {
+  margin: {
+    top: 30px;
+  }
+  padding: {
+    top: 30px;
   }
 }
