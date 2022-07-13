@@ -12,10 +12,10 @@
   justify-content: center;
   align-items: center;
   @include responsive.for-size(Large) {
-    flex-direction: row;
+    flex-direction: column;
   }
   @include responsive.for-size(XLarge) {
-    flex-direction: row;
+    flex-direction: column;
     width: 80%;
   }
 }
@@ -45,12 +45,12 @@
   }
   @include responsive.for-size(Large) {
     justify-content: row;
-    flex-direction: column;
+    flex-direction: row;
     width: 40%;
   }
   @include responsive.for-size(XLarge) {
     justify-content: row;
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 
