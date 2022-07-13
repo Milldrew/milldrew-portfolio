@@ -12,11 +12,9 @@
 
   @include responsive.for-size(XLarge) {
     font-size: 160%;
-    height: 100px;
   }
   @include responsive.for-size(Large) {
     font-size: 140%;
-    height: 100px;
   }
   @include responsive.for-size(Medium) {
     font-size: 130%;
