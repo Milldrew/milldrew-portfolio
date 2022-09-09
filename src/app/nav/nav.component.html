@@ -31,6 +31,49 @@
       <a class="title" routerLink="">
         <span>Milldrew</span>
       </a>
+      <!----------- CHANGE LANGUAGE------------- -->
+      <button
+        (click)="toggleLanguageMenu()"
+        type="button"
+        cdkOverlayOrigin
+        #languageMenu="cdkOverlayOrigin"
+        class="language-menu"
+        color="accent"
+        mat-icon-button
+      >
+        <mat-icon>translate</mat-icon>
+      </button>
+      <ng-template
+        cdkConnectedOverlay
+        [cdkConnectedOverlayOrigin]="languageMenu"
+        [cdkConnectedOverlayOpen]="isOpenLanguages"
+        ><mat-card>
+          <mat-action-list (click)="toggleLanguageMenu()" role="list">
+            <button
+              (click)="chosenLanguage('en')"
+              mat-list-item
+              role="list-option"
+            >
+              English
+            </button>
+            <button
+              mat-list-item
+              role="list-option"
+              (click)="chosenLanguage('es')"
+            >
+              Español
+            </button>
+            <button
+              mat-list-item
+              role="list-option"
+              (click)="chosenLanguage('chinese')"
+            >
+              你好
+            </button>
+          </mat-action-list>
+        </mat-card></ng-template
+      >
+
       <!-- ---------TYPOGRAPHY THEMES------------- -->
       <button
         (click)="toggleFontMenu()"

@@ -28,6 +28,11 @@ mat-sidenav-content {
   z-index: 1;
 }
 
+.language-menu {
+  position: absolute;
+  right: 170px;
+  cursor: pointer;
+}
 .typography-menu {
   position: absolute;
   right: 60px;

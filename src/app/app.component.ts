@@ -1,6 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -12,10 +13,18 @@ export class AppComponent {
   constructor(
     public router: Router,
     @Inject(DOCUMENT) private document: Document,
-    private renderer: Renderer2
-  ) {}
+    private renderer: Renderer2,
+    public translateService: TranslateService
+  ) {
+    translateService.addLangs(['en', 'es', 'chinese']);
+    translateService.setDefaultLang('es');
+    translateService.stream('welcomeMessage').subscribe(console.log);
+  }
   currentTheme: string = 'deep-purple-amber';
   currentFont: string = 'handwriting';
+  changeLanguage(language: string) {
+    this.translateService.use(language);
+  }
   changeFont(font: string) {
     this.currentFont = font;
     const classes = `${this.currentTheme}  ${this.currentFont}`;

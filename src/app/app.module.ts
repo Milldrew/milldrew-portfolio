@@ -22,6 +22,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PcardComponent } from './projects/pcard/pcard.component';
 import { DegreesComponent } from './degrees/degrees.component';
 import { CertificationsComponent } from './certifications/certifications.component';
+//=== NGX TRANSLATE BELOW THIS
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient);
+}
 import { CcardComponent } from './certifications/ccard/ccard.component';
 
 @NgModule({
@@ -37,6 +45,14 @@ import { CcardComponent } from './certifications/ccard/ccard.component';
     CcardComponent,
   ],
   imports: [
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
+    HttpClientModule,
     MatExpansionModule,
     MatTooltipModule,
     MatCardModule,

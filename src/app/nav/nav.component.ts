@@ -10,9 +10,13 @@ import { GoToTopService } from '../services/go-to-top.service';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent {
+  isOpenLanguages = false;
   isOpenFonts = false;
   isOpen = false;
 
+  toggleLanguageMenu() {
+    this.isOpenLanguages = !this.isOpenLanguages;
+  }
   toggleFontMenu() {
     this.isOpenFonts = !this.isOpenFonts;
   }
@@ -29,6 +33,7 @@ export class NavComponent {
   typography = 'Handwriting';
   @Output() private chooseTypography: EventEmitter<string>;
   @Output() private chooseTheme: EventEmitter<string>;
+  @Output() private chooseLanguage: EventEmitter<string>;
   constructor(
     public topService: GoToTopService,
     private breakpointObserver: BreakpointObserver,
@@ -36,6 +41,11 @@ export class NavComponent {
   ) {
     this.chooseTheme = new EventEmitter();
     this.chooseTypography = new EventEmitter();
+    this.chooseLanguage = new EventEmitter();
+  }
+
+  chosenLanguage(language: string) {
+    this.chooseLanguage.emit(language);
   }
   chosenTheme(theme: string) {
     this.chooseTheme.emit(theme);
