@@ -29,11 +29,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
-  return new TranslateHttpLoader(
-    httpClient,
-    './milldrew-portfolio/assets/i18n/',
-    '.json'
-  );
+  return new TranslateHttpLoader(httpClient);
 }
 
 @NgModule({
