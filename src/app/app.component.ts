@@ -17,12 +17,13 @@ export class AppComponent {
     public translateService: TranslateService
   ) {
     translateService.addLangs(['en', 'es', 'chinese']);
-    translateService.setDefaultLang('es');
+    translateService.setDefaultLang('en');
     translateService.stream('welcomeMessage').subscribe(console.log);
   }
   currentTheme: string = 'deep-purple-amber';
   currentFont: string = 'handwriting';
   changeLanguage(language: string) {
+    console.log(`change language: ${language}`);
     this.translateService.use(language);
   }
   changeFont(font: string) {

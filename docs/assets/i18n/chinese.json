@@ -1,3 +1,11 @@
 {
-  "welcomeMessage": "你好世界"
+  "welcomeMessage": "你好世界",
+  "AboutMeFirstP": "我目前在密歇根州安娜堡的一家名为 Advaita Bio 的公司工作。该公司是一家生物信息学公司，销售网络应用程序的订阅为研究人员分析和可视化生物数据提供工具。我是 Angular 团队的主题专家。我有内在的动力去掌握角。我相信能够快速创建用户喜欢使用的用户界面是软件工程的一项关键基本技能。我也用云com提供谷歌云平台和亚马逊网络服务等服务。要构建应用服务器或 cli 应用程序，我使用 node.js",
+  "footerStatement": "由安德鲁·米勒创建",
+  "projectsHeader": "安德鲁最近的项目",
+  "robotTitle": "机器人摄影师",
+  "todoTitle": "待办事项列表",
+  "onsaveTitle": "保存时",
+  "mineTitle": "地雷行者",
+  "libTitle": "角度库"
 }

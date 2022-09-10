@@ -1,4 +1,4 @@
-<h1 class="inherit-typography">Andrew's Recent Projects</h1>
+<h1 class="inherit-typography">{{ "projectsHeader" | translate }}</h1>
 
 <div class="all-cards">
   <div class="two-cards">
@@ -10,7 +10,7 @@
       liveApp="https://milldrew.github.io/robot-photographer/"
       moreContent="This app runs a containerized puppeteer service on the backend. The user can use a URL and a css selector to take screen shots. Puppeteer writes the files to a folder and the nestjs statically serves them. In retrospect I probably would have used playwright instead of puppeteer, and instead of statically serving the photos. I would resolve them in memory as buffers, and then render their URL in the browser using the Image Api. Playwright was created by the same people who started puppetter, except it appears to be a lot better, it supports multiple browsers, and has automatic wait."
       subtitle="Developer Tool"
-      title="Robot Photographer"
+      [title]="translationObject.robotTitle"
     >
     </app-pcard>
     <app-pcard
@@ -20,7 +20,7 @@
       liveApp="https://milldrew.github.io/TODOLIST/"
       moreContent="Cloud build watches my github repostiory. When I make a new commit to the master branch cloud build will use the new code to create an image with the Dockerfile. Then it will use the new image to deploy the respective container to cloud run."
       subtitle="Productivity Tool"
-      title="Todo List"
+      [title]="translationObject.todoTitle"
     ></app-pcard>
   </div>
 
@@ -32,7 +32,7 @@
       liveApp="https://milldrew.github.io/MINEWALKER/"
       moreContent="You can move the frog square to square by clicking on adjacent squares. If you get the star you will get points! This was one of the first projects I did when I switched from heavily using React to heavily using Angular. I did it for free university credit for a computer science course. After reviewing all of my options I decided I am better off getting a cloud computing degree. Right Now I am studying for Cloud Computing Certifications that can be subsituted for university credits."
       subtitle="Entertainment"
-      title="Minewalker"
+      [title]="translationObject.mineTitle"
     ></app-pcard>
 
     <app-pcard
@@ -42,7 +42,7 @@
       liveApp="https://www.npmjs.com/package/milldrews-lib"
       moreContent=" For example if I create an Angular Material theme in scss that I want to reuse I can package it in this library. If I create a directive that I want to reuse I can package it in this library."
       subtitle="Developer Tool"
-      title="Angular Library "
+      [title]="translationObject.libTitle"
     ></app-pcard>
   </div>
 
@@ -54,7 +54,7 @@
       liveApp="https://www.npmjs.com/package/onsave"
       moreContent="The package exports the cli onsave. The first argument is the path to the file, and the second argument is the command that you want to run each time the file is saved. The CLI does work for hanging process like an http server. The handler command can be multiple arguments. It is also possible to write a bash script and then run the bash script each time the file is saved. This is one of the only old projects that survived from me deleting all my repos. I am happy it did! Because it comes in clutch when there is no --watch option."
       subtitle="Developer Tool"
-      title="onsave"
+      [title]="translationObject.onsaveTitle"
     ></app-pcard>
   </div>
 </div>

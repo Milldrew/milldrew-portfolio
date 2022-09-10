@@ -1,3 +1,11 @@
 {
-  "welcomeMessage": "Hola Mundo"
+  "welcomeMessage": "Hola Mundo",
+  "AboutMeFirstP": "Actualmente estoy trabajando para una empresa llamada Advaita Bio en Ann Arbor Michigan. La empresa es una empresa de bioinformática que vende suscripciones a una aplicación web que proporciona herramientas para que los investigadores analicen y visualicen datos biológicos. Soy el experto en la materia del equipo de Angular. Estoy intrínsecamente motivado para dominar Angular. Creo que ser capaz de crear rápidamente interfaces de usuario que sean del agrado de los usuarios es una habilidad fundamental clave de la ingeniería de software. yo tambien uso cloudcom poner servicios como Google Cloud Platform y Amazon Web Services. Para construir servidores de aplicaciones o aplicaciones cli, uso node.js",
+  "footerStatement": "Creado por Andrew Miller",
+  "projectsHeader": "Proyectos recientes de Andrew",
+  "robotTitle": "Robot Fotógrafo",
+  "todoTitle": "Lista de tareas pendientes",
+  "onsaveTitle": "al guardar",
+  "mineTitle": "Caminante de minas",
+  "libTitle": "Biblioteca Angular"
 }
