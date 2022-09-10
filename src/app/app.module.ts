@@ -22,15 +22,19 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PcardComponent } from './projects/pcard/pcard.component';
 import { DegreesComponent } from './degrees/degrees.component';
 import { CertificationsComponent } from './certifications/certifications.component';
+import { CcardComponent } from './certifications/ccard/ccard.component';
 //=== NGX TRANSLATE BELOW THIS
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
-  return new TranslateHttpLoader(httpClient);
+  return new TranslateHttpLoader(
+    httpClient,
+    './milldrew-portfolio/assets/i18n/',
+    '.json'
+  );
 }
-import { CcardComponent } from './certifications/ccard/ccard.component';
 
 @NgModule({
   declarations: [
