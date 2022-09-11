@@ -1,11 +1,1 @@
-{
-  "welcomeMessage": "你好世界",
-  "AboutMeFirstP": "我目前在密歇根州安娜堡的一家名为 Advaita Bio 的公司工作。该公司是一家生物信息学公司，销售网络应用程序的订阅为研究人员分析和可视化生物数据提供工具。我是 Angular 团队的主题专家。我有内在的动力去掌握角。我相信能够快速创建用户喜欢使用的用户界面是软件工程的一项关键基本技能。我也用云com提供谷歌云平台和亚马逊网络服务等服务。要构建应用服务器或 cli 应用程序，我使用 node.js",
-  "footerStatement": "由安德鲁·米勒创建",
-  "projectsHeader": "安德鲁最近的项目",
-  "robotTitle": "机器人摄影师",
-  "todoTitle": "待办事项列表",
-  "onsaveTitle": "保存时",
-  "mineTitle": "地雷行者",
-  "libTitle": "角度库"
-}
+{"welcomeMessage":"你好，世界","introduction":"导言","AboutMeFirstP":"我目前在密歇根州安娜堡的一家名为Advaita Bio的公司工作。该公司是一家生物信息学公司，销售网络应用程序的订阅，该应用程序为研究人员提供分析和可视化生物数据的工具。我是Angular团队的主题专家。我有内在的动力去掌握 Angular。我相信，能够快速创建用户喜欢使用的用户界面是软件工程的一项关键基础技能。我还使用谷歌云平台和亚马逊网络服务等云计算服务。为了构建应用程序服务器或 cli 应用程序，我使用 node.js","footerStatement":"由安德鲁·米勒创作","projectsHeader":"安德鲁最近的项目","robotTitle":"机器人摄影师","robotSubTitle":"开发者工具","todoTitle":"待办事项清单","todoSubTitle":"生产力工具","onsaveTitle":"onsave","onsaveSubTitle":"开发者工具","mineTitle":"我的行者","mineSubTitle":"娱乐","libTitle":"角度库","libSubTitle":"开发者工具","menu":"菜单","projects":"项目","certifications":"认证","degrees":"学位","deepPurpleAmber":"深紫琥珀色","indigoPink":"靛粉色（浅色）","pinkBlueGray":"粉色蓝色灰色","purpleGreen":"紫绿","handwriting":"手写","monospace":"等宽空间","serif":"截线","sansSerif":"Sans-Serif"}
