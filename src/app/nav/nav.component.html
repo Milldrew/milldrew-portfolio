@@ -13,10 +13,12 @@
       <a color="accent" mat-list-item routerLink="projects">{{
         "projects" | translate
       }}</a>
-      <a color="accent" mat-list-item routerLink="certifications"
-        >Certifications</a
-      >
-      <a color="accent" mat-list-item routerLink="degrees">Degrees</a>
+      <a color="accent" mat-list-item routerLink="certifications">{{
+        "certifications" | translate
+      }}</a>
+      <a color="accent" mat-list-item routerLink="degrees">{{
+        "degrees" | translate
+      }}</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content #content>
@@ -99,28 +101,28 @@
               mat-list-item
               role="list-option"
             >
-              Handwriting
+              {{ "handwriting" | translate }}
             </button>
             <button
               mat-list-item
               role="list-option"
               (click)="chosenTypography('monospace')"
             >
-              Monospace
+              {{ "monospace" | translate }}
             </button>
             <button
               mat-list-item
               role="list-option"
               (click)="chosenTypography('serif')"
             >
-              Serif
+              {{ "serif" | translate }}
             </button>
             <button
               mat-list-item
               role="list-option"
               (click)="chosenTypography('sans-serif')"
             >
-              Sans-serif
+              {{ "sansSerif" | translate }}
             </button>
           </mat-action-list>
         </mat-card></ng-template
