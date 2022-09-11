@@ -7,10 +7,12 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="(isHandset$ | async) === false"
   >
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar>{{ "menu" | translate }}</mat-toolbar>
     <mat-nav-list>
-      <a color="accent" mat-list-item routerLink="">Home</a>
-      <a color="accent" mat-list-item routerLink="projects">Projects</a>
+      <a color="accent" mat-list-item routerLink="">{{ "home" | translate }}</a>
+      <a color="accent" mat-list-item routerLink="projects">{{
+        "projects" | translate
+      }}</a>
       <a color="accent" mat-list-item routerLink="certifications"
         >Certifications</a
       >
