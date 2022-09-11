@@ -19,10 +19,15 @@ export class ProjectsComponent {
     tranlsateService
       .stream([
         'robotTitle',
+        'robotSubTitle',
         'todoTitle',
+        'todoSubTitle',
         'onsaveTitle',
+        'onsaveSubTitle',
         'mineTitle',
+        'mineSubTitle',
         'libTitle',
+        'libSubTitle',
       ])
       .subscribe((translations) => {
         console.log(translations);
