@@ -13,6 +13,7 @@ export class NavComponent {
   isOpenLanguages = false;
   isOpenFonts = false;
   isOpen = false;
+  typography = '';
 
   toggleLanguageMenu() {
     this.isOpenLanguages = !this.isOpenLanguages;
@@ -30,7 +31,6 @@ export class NavComponent {
       shareReplay()
     );
 
-  typography = 'Handwriting';
   @Output() private chooseTypography: EventEmitter<string>;
   @Output() private chooseTheme: EventEmitter<string>;
   @Output() private chooseLanguage: EventEmitter<string>;
