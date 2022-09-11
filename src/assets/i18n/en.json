@@ -21,5 +21,9 @@
   "deepPurpleAmber": "Deep Purple Amber",
   "indigoPink": "Indigo Pink (light)",
   "pinkBlueGray": "Pink Blue Gray",
-  "purpleGreen": "Purple Green"
+  "purpleGreen": "Purple Green",
+  "handwriting": "Handwriting",
+  "monospace": "Monospace",
+  "serif": "Serif",
+  "sansSerif": "Sans-Serif"
 }
