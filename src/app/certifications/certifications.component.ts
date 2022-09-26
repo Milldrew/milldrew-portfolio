@@ -17,6 +17,7 @@ export class CertificationsComponent {
   ) {
     this.translateService
       .stream([
+        'applicationDeveloper',
         'serviceDeveloper',
         'openJSFoundation',
         'openJSFoundationContent',
