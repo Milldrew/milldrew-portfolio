@@ -27,5 +27,12 @@
   "handwriting": "Handwriting",
   "monospace": "Monospace",
   "serif": "Serif",
-  "sansSerif": "Sans-Serif"
+  "sansSerif": "Sans-Serif",
+  "coldTitle": "COLD Certification",
+  "coldSubTitle": "Community Service UAF",
+  "coldContent": "This certificat was awarded for my community service whork while going to UAF.",
+  "serviceDeveloper": "Service Developer",
+  "applicationDeveloper": "Application Developer",
+  "openJSFoundation": "OpenJS Foundation",
+  "openJSFoundationContent": "This certificate was awareded via a strict monitored live programing exam."
 }
