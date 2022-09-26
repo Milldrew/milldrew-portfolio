@@ -8,6 +8,7 @@ import { GoToTopService } from '../services/go-to-top.service';
   styleUrls: ['./certifications.component.scss'],
 })
 export class CertificationsComponent {
+  translationObject: any = {};
   constructor(
     public translateService: TranslateService,
     public hostElement: ElementRef,
