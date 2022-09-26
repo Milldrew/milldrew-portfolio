@@ -15,7 +15,11 @@ export class CertificationsComponent {
     public goToTop: GoToTopService,
     public window: Window
   ) {
-    this.translateService.stream(['welcomeMessage']);
+    this.translateService
+      .stream(['welcomeMessage'])
+      .subscribe((translations) => {
+        this.translationObject = translations;
+      });
   }
 
   ngAfterContentInit() {
