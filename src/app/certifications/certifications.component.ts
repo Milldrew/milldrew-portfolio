@@ -16,9 +16,10 @@ export class CertificationsComponent {
     public window: Window
   ) {
     this.translateService
-      .stream(['welcomeMessage'])
+      .stream(['serviceDeveloper', 'openJSFoundation'])
       .subscribe((translations) => {
         this.translationObject = translations;
+        console.log(this.translationObject);
       });
   }
 
