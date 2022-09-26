@@ -22,10 +22,10 @@
 
   <div class="two-cards">
     <app-ccard
-      subtitle="Community Service UAF"
-      title="COLD certification"
+      [subtitle]="translationObject.coldSubTitle"
+      [title]="translationObject.coldTitle"
       imgSrc="assets/certs/cold.svg"
-      content="This certification was awarded for my commuinity service work while going to UAF"
+      [content]="translationObject.coldContent"
       websiteLink="https://uaf.edu/sli/leadership/cold/how-to-get.php"
     >
     </app-ccard>
