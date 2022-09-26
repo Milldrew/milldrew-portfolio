@@ -21,6 +21,9 @@ export class CertificationsComponent {
         'serviceDeveloper',
         'openJSFoundation',
         'openJSFoundationContent',
+        'coldTitle',
+        'coldSubTitle',
+        'coldContent',
       ])
       .subscribe((translations) => {
         this.translationObject = translations;
