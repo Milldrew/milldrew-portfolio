@@ -36,97 +36,99 @@
         <span>Milldrew</span>
       </a>
       <!----------- CHANGE LANGUAGE------------- -->
-      <button
-        (click)="toggleLanguageMenu()"
-        type="button"
-        cdkOverlayOrigin
-        #languageMenu="cdkOverlayOrigin"
-        class="language-menu"
-        color="accent"
-        mat-icon-button
-      >
-        <mat-icon>translate</mat-icon>
-      </button>
-      <ng-template
-        cdkConnectedOverlay
-        [cdkConnectedOverlayOrigin]="languageMenu"
-        [cdkConnectedOverlayOpen]="isOpenLanguages"
-        ><mat-card>
-          <mat-action-list (click)="toggleLanguageMenu()" role="list">
-            <button
-              (click)="chosenLanguage('en')"
-              mat-list-item
-              role="list-option"
-            >
-              English
-            </button>
-            <button
-              mat-list-item
-              role="list-option"
-              (click)="chosenLanguage('es')"
-            >
-              Español
-            </button>
-            <button
-              mat-list-item
-              role="list-option"
-              (click)="chosenLanguage('chinese')"
-            >
-              你好
-            </button>
-          </mat-action-list>
-        </mat-card></ng-template
-      >
+      <div class="icon-container">
+        <button
+          (click)="toggleLanguageMenu()"
+          type="button"
+          cdkOverlayOrigin
+          #languageMenu="cdkOverlayOrigin"
+          class="language-menu"
+          color="accent"
+          mat-icon-button
+        >
+          <mat-icon>translate</mat-icon>
+        </button>
+        <ng-template
+          cdkConnectedOverlay
+          [cdkConnectedOverlayOrigin]="languageMenu"
+          [cdkConnectedOverlayOpen]="isOpenLanguages"
+          ><mat-card>
+            <mat-action-list (click)="toggleLanguageMenu()" role="list">
+              <button
+                (click)="chosenLanguage('en')"
+                mat-list-item
+                role="list-option"
+              >
+                English
+              </button>
+              <button
+                mat-list-item
+                role="list-option"
+                (click)="chosenLanguage('es')"
+              >
+                Español
+              </button>
+              <button
+                mat-list-item
+                role="list-option"
+                (click)="chosenLanguage('chinese')"
+              >
+                你好
+              </button>
+            </mat-action-list>
+          </mat-card></ng-template
+        >
 
-      <!-----------TYPOGRAPHY THEMES------------- -->
-      <button
-        (click)="toggleFontMenu()"
-        type="button"
-        cdkOverlayOrigin
-        #typographymenu="cdkOverlayOrigin"
-        class="typography-menu"
-        color="accent"
-        mat-button
-      >
-        {{ "handwriting" | translate }}
-      </button>
-      <ng-template
-        cdkConnectedOverlay
-        [cdkConnectedOverlayOrigin]="typographymenu"
-        [cdkConnectedOverlayOpen]="isOpenFonts"
-        ><mat-card>
-          <mat-action-list (click)="toggleFontMenu()" role="list">
-            <button
-              (click)="chosenTypography('handwriting')"
-              mat-list-item
-              role="list-option"
-            >
-              {{ "handwriting" | translate }}
-            </button>
-            <button
-              mat-list-item
-              role="list-option"
-              (click)="chosenTypography('monospace')"
-            >
-              {{ "monospace" | translate }}
-            </button>
-            <button
-              mat-list-item
-              role="list-option"
-              (click)="chosenTypography('serif')"
-            >
-              {{ "serif" | translate }}
-            </button>
-            <button
-              mat-list-item
-              role="list-option"
-              (click)="chosenTypography('sans-serif')"
-            >
-              {{ "sansSerif" | translate }}
-            </button>
-          </mat-action-list>
-        </mat-card></ng-template
-      >
+        <!-----------TYPOGRAPHY THEMES------------- -->
+        <button
+          (click)="toggleFontMenu()"
+          type="button"
+          cdkOverlayOrigin
+          #typographymenu="cdkOverlayOrigin"
+          class="typography-menu"
+          color="accent"
+          mat-button
+        >
+          {{ "handwriting" | translate }}
+        </button>
+        <ng-template
+          cdkConnectedOverlay
+          [cdkConnectedOverlayOrigin]="typographymenu"
+          [cdkConnectedOverlayOpen]="isOpenFonts"
+          ><mat-card>
+            <mat-action-list (click)="toggleFontMenu()" role="list">
+              <button
+                (click)="chosenTypography('handwriting')"
+                mat-list-item
+                role="list-option"
+              >
+                {{ "handwriting" | translate }}
+              </button>
+              <button
+                mat-list-item
+                role="list-option"
+                (click)="chosenTypography('monospace')"
+              >
+                {{ "monospace" | translate }}
+              </button>
+              <button
+                mat-list-item
+                role="list-option"
+                (click)="chosenTypography('serif')"
+              >
+                {{ "serif" | translate }}
+              </button>
+              <button
+                mat-list-item
+                role="list-option"
+                (click)="chosenTypography('sans-serif')"
+              >
+                {{ "sansSerif" | translate }}
+              </button>
+            </mat-action-list>
+          </mat-card></ng-template
+        >
+      </div>
       <!-- ---------COLOR THEMES ------------- -->
       <button
         (click)="toggleThemeMenu()"
