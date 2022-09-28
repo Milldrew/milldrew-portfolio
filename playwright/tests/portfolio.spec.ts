@@ -1,3 +1,9 @@
+const SPANISH_BUTTON =
+  '#cdk-overlay-0 > mat-card > mat-action-list > button:nth-child(2) > span';
+const CHINESE_BUTTON =
+  '#cdk-overlay-0 > mat-card > mat-action-list > button:nth-child(3) > span';
+const ENGLISH_BUTTON =
+  '#cdk-overlay-0 > mat-card > mat-action-list > button:nth-child(1) > span';
 const PORT_4200 = 'http://localhost:4200';
 // ==================================== SELECTORS
 const TRANSLATE_BUTTON =
@@ -13,5 +19,6 @@ test('homepage has Playwright in title and get started link linking to the intro
   };
   await page.goto(PORT_4200);
   await waitAndClickSelector(TRANSLATE_BUTTON, page);
+  await waitAndClickSelector(ENGLISH_BUTTON, page);
   await page.waitForTimeout(60000 * 10);
 });
