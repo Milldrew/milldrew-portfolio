@@ -17,6 +17,11 @@ test('homepage has Playwright in title and get started link linking to the intro
     await page.waitForSelector(selector);
     await page.click(selector);
   };
+  /*
+  const travelEntireWebsite = async (page: Page) => {
+    page
+  }
+  */
   await page.goto(PORT_4200);
   await waitAndClickSelector(TRANSLATE_BUTTON, page);
   await waitAndClickSelector(SPANISH_BUTTON, page);
