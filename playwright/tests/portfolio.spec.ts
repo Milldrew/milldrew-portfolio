@@ -27,19 +27,13 @@ test('homepage has Playwright in title and get started link linking to the intro
     await page.waitForSelector(selector);
     await page.click(selector);
   };
-  const goToFooter = async (footerLocator: Locator) => {
-    await footerTextLocator.scrollIntoViewIfNeeded();
-    await footerTextLocator.click();
-  };
   const travelEntireWebsite = async (page: Page) => {
     await page.click(PROJECTS);
-    await goToFooter(footerTextLocator);
+    await footerTextLocator.scrollIntoViewIfNeeded();
+    await footerTextLocator.click();
     await page.click(CERTIFICATIONS);
-    await goToFooter(footerTextLocator);
     await page.click(DEGREES);
-    await goToFooter(footerTextLocator);
     await page.click(HOME);
-    await goToFooter(footerTextLocator);
   };
   await page.goto(PORT_4200);
   await waitAndClickSelector(TRANSLATE_BUTTON, page);
