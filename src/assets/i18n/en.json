@@ -7,7 +7,7 @@
   "projectsHeader": "Andrew's Recent Projects",
   "robotTitle": "Robot Photographer",
   "robotSubTitle": "Developer Tool",
-  "robotContent": "Robot Photographer",
+  "robotContent": "The Robot Photographer emulates many device sizes and retrieves screenshots for you.",
   "robotMoreContent": "This app runs a containerized puppeteer service on the backend. The user can use a URL and a css selector to take screen shots. Puppeteer writes the files to a folder and the nestjs statically serves them. Introspect I probably would have used playwright instead of puppeteer, and instead of statically serving the photos. I would resolve them in memory as buffers, and then render their URL in the browser using the Image Api. Playwright was created by the same people who started puppetter, except it appears to be a lot better, it supports multiple browsers, and has automatic wait",
   "todoTitle": "Todo List",
   "todoSubTitle": "Productivity Tool",
