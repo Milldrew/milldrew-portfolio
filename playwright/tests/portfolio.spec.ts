@@ -19,7 +19,7 @@ test('homepage has Playwright in title and get started link linking to the intro
   };
   await page.goto(PORT_4200);
   await waitAndClickSelector(TRANSLATE_BUTTON, page);
-  await waitAndClickSelector(CHINESE_BUTTON, page);
+  await waitAndClickSelector(SPANISH_BUTTON, page);
   await waitAndClickSelector(CHINESE_BUTTON, page);
   await waitAndClickSelector(ENGLISH_BUTTON, page);
   await page.waitForTimeout(60000 * 10);
