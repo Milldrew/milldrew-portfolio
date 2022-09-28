@@ -1,4 +1,4 @@
-const FOOTER_TEXT = '#footer > p';
+const FOOTER = '#footer';
 const DEGREES =
   'body > app-root > app-nav > mat-sidenav-container > mat-sidenav > div > mat-nav-list > a:nth-child(4) > span';
 const CERTIFICATIONS =
@@ -22,21 +22,23 @@ import { test, expect, Page, Locator } from '@playwright/test';
 test('homepage has Playwright in title and get started link linking to the intro page', async ({
   page,
 }) => {
-  const footerTextLocator = page.locator(FOOTER_TEXT);
+  const footerLocator = page.locator(FOOTER);
   const waitAndClickSelector = async (selector: string, page: Page) => {
     await page.waitForSelector(selector);
     await page.click(selector);
   };
   const travelEntireWebsite = async (page: Page) => {
     await page.click(PROJECTS);
-    await footerTextLocator.scrollIntoViewIfNeeded();
-    await footerTextLocator.click();
+    await footerLocator.scrollIntoViewIfNeeded();
+    await footerLocator.click();
     await page.click(CERTIFICATIONS);
     await page.click(DEGREES);
     await page.click(HOME);
   };
   await page.goto(PORT_4200);
-  await footerTextLocator.scrollIntoViewIfNeeded();
+  await footerLocator.scrollIntoViewIfNeeded();
+  await footerLocator.click();
+  /*
   await waitAndClickSelector(FOOTER_TEXT, page);
   await waitAndClickSelector(TRANSLATE_BUTTON, page);
   await waitAndClickSelector(SPANISH_BUTTON, page);
@@ -46,4 +48,5 @@ test('homepage has Playwright in title and get started link linking to the intro
   await waitAndClickSelector(CHINESE_BUTTON, page);
   await page.click(TRANSLATE_BUTTON);
   await waitAndClickSelector(ENGLISH_BUTTON, page);
+  */
 });
