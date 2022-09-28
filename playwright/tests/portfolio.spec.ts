@@ -1,3 +1,4 @@
+const FOOTER_TEXT = '#footer > p';
 const DEGREES =
   'body > app-root > app-nav > mat-sidenav-container > mat-sidenav > div > mat-nav-list > a:nth-child(4) > span';
 const CERTIFICATIONS =
@@ -21,27 +22,20 @@ import { test, expect, Page } from '@playwright/test';
 test('homepage has Playwright in title and get started link linking to the intro page', async ({
   page,
 }) => {
+  const footerTextLocator = page.locator(FOOTER_TEXT);
   const waitAndClickSelector = async (selector: string, page: Page) => {
     await page.waitForSelector(selector);
     await page.click(selector);
   };
-  const scrollEntirePage = async (page: Page) => {
-    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-    await page.evaluate(() => window.scrollTo(0, -document.body.scrollHeight));
-  };
   await page.goto(PORT_4200);
-  await scrollEntirePage(page);
+  await footerTextLocator.scrollIntoViewIfNeeded();
+  await footerTextLocator.hover();
   await page.waitForTimeout(60000 * 3);
-  /*
   const travelEntireWebsite = async (page: Page) => {
     await page.click(PROJECTS);
-    await scrollEntirePage(page);
     await page.click(CERTIFICATIONS);
-    await scrollEntirePage(page);
     await page.click(DEGREES);
-    await scrollEntirePage(page);
     await page.click(HOME);
-    await scrollEntirePage(page);
   };
   await page.goto(PORT_4200);
   await waitAndClickSelector(TRANSLATE_BUTTON, page);
@@ -52,5 +46,4 @@ test('homepage has Playwright in title and get started link linking to the intro
   await waitAndClickSelector(CHINESE_BUTTON, page);
   await page.click(TRANSLATE_BUTTON);
   await waitAndClickSelector(ENGLISH_BUTTON, page);
-  */
 });
