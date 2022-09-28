@@ -17,7 +17,7 @@ const PORT_4200 = 'http://localhost:4200';
 // ==================================== SELECTORS
 const TRANSLATE_BUTTON =
   'body > app-root > app-nav > mat-sidenav-container > mat-sidenav-content > mat-toolbar > div > button.mat-focus-indicator.language-menu.mat-icon-button.mat-button-base.mat-accent > span.mat-button-wrapper > mat-icon';
-import { test, expect, Page } from '@playwright/test';
+import { test, expect, Page, Locator } from '@playwright/test';
 
 test('homepage has Playwright in title and get started link linking to the intro page', async ({
   page,
@@ -27,18 +27,19 @@ test('homepage has Playwright in title and get started link linking to the intro
     await page.waitForSelector(selector);
     await page.click(selector);
   };
-  const goToFooter = async (page: Page) => {
-    await footerTextLocator.hover();
+  const goToFooter = async (footerLocator: Locator) => {
+    await footerTextLocator.scrollIntoViewIfNeeded();
+    await footerTextLocator.click();
   };
   const travelEntireWebsite = async (page: Page) => {
     await page.click(PROJECTS);
-    await goToFooter(page);
+    await goToFooter(footerTextLocator);
     await page.click(CERTIFICATIONS);
-    await goToFooter(page);
+    await goToFooter(footerTextLocator);
     await page.click(DEGREES);
-    await goToFooter(page);
+    await goToFooter(footerTextLocator);
     await page.click(HOME);
-    await goToFooter(page);
+    await goToFooter(footerTextLocator);
   };
   await page.goto(PORT_4200);
   await waitAndClickSelector(TRANSLATE_BUTTON, page);
