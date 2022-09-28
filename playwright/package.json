@@ -7,6 +7,6 @@
     "@playwright/test": "^1.26.1"
   },
   "scripts": {
-    "chromium": "npx playwright test ./tests/portfolio.spec.ts"
+    "chromium": "npx playwright test ./tests/portfolio.spec.ts --headed"
   }
 }
