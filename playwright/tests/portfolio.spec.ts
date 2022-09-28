@@ -9,14 +9,9 @@ test('homepage has Playwright in title and get started link linking to the intro
 }) => {
   await page.goto(PORT_4200);
 
-  // Expect a title "to contain" a substring.
+  const translateButton = await page.locator(TRANSLATE_BUTTON);
 
-  // create a locator
-
-  // Expect an attribute "to be strictly equal" to the value.
-
-  // Click the get started link.
-
+  await page.waitForSelector(TRANSLATE_BUTTON);
   // Expects the URL to contain intro.
   await expect(page).toHaveURL(/.*intro/);
 });
