@@ -36,6 +36,8 @@ test('homepage has Playwright in title and get started link linking to the intro
     await page.click(HOME);
   };
   await page.goto(PORT_4200);
+  await footerTextLocator.scrollIntoViewIfNeeded();
+  await waitAndClickSelector(FOOTER_TEXT, page);
   await waitAndClickSelector(TRANSLATE_BUTTON, page);
   await waitAndClickSelector(SPANISH_BUTTON, page);
   await travelEntireWebsite(page);
