@@ -29,8 +29,8 @@ test('homepage has Playwright in title and get started link linking to the intro
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
     await page.evaluate(() => window.scrollTo(0, -document.body.scrollHeight));
   };
-
-  await page.mouse.wheel(0, 10000);
+  await page.goto(PORT_4200);
+  await scrollEntirePage(page);
   await page.waitForTimeout(60000 * 3);
   /*
   const travelEntireWebsite = async (page: Page) => {
