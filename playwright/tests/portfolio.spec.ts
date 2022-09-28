@@ -25,10 +25,13 @@ test('homepage has Playwright in title and get started link linking to the intro
     await page.waitForSelector(selector);
     await page.click(selector);
   };
-  const scrollEntirePage = async (page: Page) => {
-    await page.mouse.wheel(0, -10000);
-    await page.mouse.wheel(0, 10000);
-  };
+  const scrollEntirePage = async (page: Page) => {};
+
+  await page.goto(PORT_4200);
+  await page.mouse.wheel(0, 10000);
+  await page.mouse.wheel(0, 10000);
+  await page.waitForTimeout(60000 * 3);
+  /*
   const travelEntireWebsite = async (page: Page) => {
     await page.click(PROJECTS);
     await scrollEntirePage(page);
@@ -44,7 +47,6 @@ test('homepage has Playwright in title and get started link linking to the intro
   await waitAndClickSelector(SPANISH_BUTTON, page);
   await travelEntireWebsite(page);
   await page.waitForTimeout(60000 * 0.5);
-  /*
   await page.click(TRANSLATE_BUTTON);
   await waitAndClickSelector(CHINESE_BUTTON, page);
   await page.click(TRANSLATE_BUTTON);
