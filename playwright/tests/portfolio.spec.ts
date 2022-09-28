@@ -29,19 +29,19 @@ test('homepage has Playwright in title and get started link linking to the intro
   };
   const travelEntireWebsite = async (page: Page) => {
     await page.click(PROJECTS);
-    await footerLocator.scrollIntoViewIfNeeded();
-    await footerLocator.click();
+    await scrollToFooter(footerLocator);
     await page.click(CERTIFICATIONS);
+    await scrollToFooter(footerLocator);
     await page.click(DEGREES);
+    await scrollToFooter(footerLocator);
     await page.click(HOME);
+    await scrollToFooter(footerLocator);
   };
   async function scrollToFooter(footerLocator: Locator) {
     await footerLocator.scrollIntoViewIfNeeded();
     await footerLocator.click();
   }
   await page.goto(PORT_4200);
-  /*
-  await waitAndClickSelector(FOOTER_TEXT, page);
   await waitAndClickSelector(TRANSLATE_BUTTON, page);
   await waitAndClickSelector(SPANISH_BUTTON, page);
   await travelEntireWebsite(page);
@@ -50,5 +50,4 @@ test('homepage has Playwright in title and get started link linking to the intro
   await waitAndClickSelector(CHINESE_BUTTON, page);
   await page.click(TRANSLATE_BUTTON);
   await waitAndClickSelector(ENGLISH_BUTTON, page);
-  */
 });
