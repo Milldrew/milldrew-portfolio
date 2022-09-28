@@ -45,9 +45,10 @@ test('homepage has Playwright in title and get started link linking to the intro
   await waitAndClickSelector(TRANSLATE_BUTTON, page);
   await waitAndClickSelector(SPANISH_BUTTON, page);
   await travelEntireWebsite(page);
-  await page.waitForTimeout(60000 * 0.5);
   await page.click(TRANSLATE_BUTTON);
   await waitAndClickSelector(CHINESE_BUTTON, page);
+  await travelEntireWebsite(page);
   await page.click(TRANSLATE_BUTTON);
   await waitAndClickSelector(ENGLISH_BUTTON, page);
+  await page.waitForTimeout(60000 * 0.5);
 });
