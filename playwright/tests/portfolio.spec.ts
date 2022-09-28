@@ -9,7 +9,7 @@ test('homepage has Playwright in title and get started link linking to the intro
 }) => {
   await page.goto(PORT_4200);
 
-  const translateButton = await page.locator(TRANSLATE_BUTTON);
+  const translateButton = page.locator(TRANSLATE_BUTTON);
 
   await page.waitForSelector(TRANSLATE_BUTTON);
   // Expects the URL to contain intro.
