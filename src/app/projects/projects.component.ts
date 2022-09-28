@@ -20,14 +20,24 @@ export class ProjectsComponent {
       .stream([
         'robotTitle',
         'robotSubTitle',
+        'robotContent',
+        'robotMoreContent',
         'todoTitle',
         'todoSubTitle',
+        'todoContent',
+        'todoMoreContent',
         'onsaveTitle',
         'onsaveSubTitle',
+        'onsaveContent',
+        'onsaveMoreContent',
         'mineTitle',
         'mineSubTitle',
+        'mineContent',
+        'mineMoreContent',
         'libTitle',
         'libSubTitle',
+        'libContent',
+        'libMoreContent',
       ])
       .subscribe((translations) => {
         console.log(translations);
