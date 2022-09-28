@@ -10,8 +10,5 @@ test('homepage has Playwright in title and get started link linking to the intro
   await page.goto(PORT_4200);
 
   const translateButton = page.locator(TRANSLATE_BUTTON);
-
   await page.waitForSelector(TRANSLATE_BUTTON);
-  // Expects the URL to contain intro.
-  await expect(page).toHaveURL(/.*intro/);
 });
