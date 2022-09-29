@@ -37,10 +37,10 @@
 
     <app-pcard
       codeLink="https://github.com/Milldrew/ngx-milldrew/tree/master/projects/milldrews-lib"
-      content="This is my personal angular library. It is for angular code that I want to reuse across other projects."
+      [content]="translationObject.libContent"
       imgSrc="assets/schematic.gif"
       liveApp="https://www.npmjs.com/package/milldrews-lib"
-      moreContent=" For example if I create an Angular Material theme in scss that I want to reuse I can package it in this library. If I create a directive that I want to reuse I can package it in this library."
+      [moreContent]="translationObject.libMoreContent"
       [subtitle]="translationObject.libSubTitle"
       [title]="translationObject.libTitle"
     ></app-pcard>
