@@ -27,10 +27,10 @@
   <div class="two-cards">
     <app-pcard
       uiCodeLink="https://github.com/milldrew/MINEWALKER"
-      content="This is a minewsweeper like game that I built in two days with Angular."
+      [content]="translationObject.mineContent"
       imgSrc="assets/minewalker.gif"
       liveApp="https://milldrew.github.io/MINEWALKER/"
-      moreContent="You can move the frog square to square by clicking on adjacent squares. If you get the star you will get points! This was one of the first projects I did when I switched from heavily using React to heavily using Angular. I did it for free university credit for a computer science course. After reviewing all of my options I decided I am better off getting a cloud computing degree. Right Now I am studying for Cloud Computing Certifications that can be subsituted for university credits."
+      [moreContent]="translationObject.mineMoreContent"
       [subtitle]="translationObject.mineSubTitle"
       [title]="translationObject.mineTitle"
     ></app-pcard>
