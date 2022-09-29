@@ -15,10 +15,10 @@
     </app-pcard>
     <app-pcard
       codeLink="https://github.com/milldrew/TODOLIST"
-      content="translationObject.todoContent"
+      [content]="translationObject.todoContent"
       imgSrc="assets/todolist.jpg"
       liveApp="https://milldrew.github.io/TODOLIST/"
-      moreContent="Cloud build watches my github repostiory. When I make a new commit to the master branch cloud build will use the new code to create an image with the Dockerfile. Then it will use the new image to deploy the respective container to cloud run."
+      [moreContent]="translationObject.todoMoreContent"
       [subtitle]="translationObject.todoTitle"
       [title]="translationObject.todoTitle"
     ></app-pcard>
