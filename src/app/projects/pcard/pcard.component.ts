@@ -24,8 +24,13 @@ export class PcardComponent implements OnInit {
   liveApp: string = '';
   @Input()
   imgSrc: string = '';
+  @Input()
+  isPaused: boolean = false;
+  cardCoverColor: string = '';
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.cardCoverColor = this.isPaused ? '#FFFFFF' : '#000000';
+  }
 }
