@@ -25,12 +25,12 @@ export class PcardComponent implements OnInit {
   @Input()
   imgSrc: string = '';
   @Input()
-  isPaused: boolean = false;
+  isPaused: boolean = true;
   cardCoverColor: string = '';
 
   constructor() {}
 
   ngOnInit(): void {
-    this.cardCoverColor = this.isPaused ? '#FFFFFF' : '#000000';
+    this.cardCoverColor = this.isPaused ? '#FF000088' : '#000000';
   }
 }
