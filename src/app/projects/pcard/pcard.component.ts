@@ -13,7 +13,7 @@ export class PcardComponent implements OnInit {
   @Input()
   content: string = 'content';
   @Input()
-  moreContent: string = 'moreContent';
+  moreContent: string = '';
   @Input()
   serverCodeLink: string = '';
   @Input()
