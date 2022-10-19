@@ -3,6 +3,39 @@
 <div class="all-cards">
   <div class="two-cards">
     <app-pcard
+      uiCodeLink="https://github.com/milldrew/MINEWALKER"
+      [content]="translationObject.mineContent"
+      imgSrc="assets/minewalker.gif"
+      liveApp="https://milldrew.github.io/MINEWALKER/"
+      [moreContent]="translationObject.mineMoreContent"
+      [subtitle]="translationObject.mineSubTitle"
+      [title]="translationObject.mineTitle"
+    ></app-pcard>
+  </div>
+
+  <div class="two-cards">
+    <app-pcard
+      codeLink="https://github.com/Milldrew/ngx-milldrew/tree/master/projects/milldrews-lib"
+      [content]="translationObject.libContent"
+      imgSrc="assets/schematic.gif"
+      liveApp="https://www.npmjs.com/package/milldrews-lib"
+      [moreContent]="translationObject.libMoreContent"
+      [subtitle]="translationObject.libSubTitle"
+      [title]="translationObject.libTitle"
+    ></app-pcard>
+    <app-pcard
+      codeLink="https://github.com/onsave"
+      [content]="this.translationObject.onsaveContent"
+      imgSrc="assets/onsave-img.svg"
+      liveApp="https://www.npmjs.com/package/onsave"
+      [moreContent]="this.translationObject.onsaveMoreContent"
+      [subtitle]="translationObject.onsaveSubTitle"
+      [title]="translationObject.onsaveTitle"
+    ></app-pcard>
+  </div>
+  <h2 class="inherit-typography paused">Paused Projects</h2>
+  <div class="two-cards paused">
+    <app-pcard
       serverCodeLink="https://github.com/Milldrew/photo-shoot"
       uiCodeLink="https://github.com/milldrew/robot-photographer"
       [content]="translationObject.robotContent"
@@ -21,40 +54,6 @@
       [moreContent]="translationObject.todoMoreContent"
       [subtitle]="translationObject.todoTitle"
       [title]="translationObject.todoTitle"
-    ></app-pcard>
-  </div>
-
-  <div class="two-cards">
-    <app-pcard
-      uiCodeLink="https://github.com/milldrew/MINEWALKER"
-      [content]="translationObject.mineContent"
-      imgSrc="assets/minewalker.gif"
-      liveApp="https://milldrew.github.io/MINEWALKER/"
-      [moreContent]="translationObject.mineMoreContent"
-      [subtitle]="translationObject.mineSubTitle"
-      [title]="translationObject.mineTitle"
-    ></app-pcard>
-
-    <app-pcard
-      codeLink="https://github.com/Milldrew/ngx-milldrew/tree/master/projects/milldrews-lib"
-      [content]="translationObject.libContent"
-      imgSrc="assets/schematic.gif"
-      liveApp="https://www.npmjs.com/package/milldrews-lib"
-      [moreContent]="translationObject.libMoreContent"
-      [subtitle]="translationObject.libSubTitle"
-      [title]="translationObject.libTitle"
-    ></app-pcard>
-  </div>
-
-  <div class="two-cards">
-    <app-pcard
-      codeLink="https://github.com/onsave"
-      [content]="this.translationObject.onsaveContent"
-      imgSrc="assets/onsave-img.svg"
-      liveApp="https://www.npmjs.com/package/onsave"
-      [moreContent]="this.translationObject.onsaveMoreContent"
-      [subtitle]="translationObject.onsaveSubTitle"
-      [title]="translationObject.onsaveTitle"
     ></app-pcard>
   </div>
 </div>
